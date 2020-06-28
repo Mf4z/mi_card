@@ -9,54 +9,33 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
-          /*switching to a Row widget does a similar job
-            as a Column just that a Row is Horizontal and uses heights to space*/
-
-//          verticalDirection: VerticalDirection.up,
-//          verticalDirection: VerticalDirection.down,
-//          crossAxisAlignment: CrossAxisAlignment.stretch,
-//          mainAxisAlignment: MainAxisAlignment.start,
-//          mainAxisAlignment: MainAxisAlignment.end,
-//          mainAxisAlignment: MainAxisAlignment.center,
-//          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-//          crossAxisAlignment: CrossAxisAlignment.end,
-//          crossAxisAlignment: CrossAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-
           children: <Widget>[
-            Container(
-              //Container can only have one child
-//              width: 100.0,
-              height: 100.0,
-              color: Colors.white,
-              child: Text('Container 1'),
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/mypicture.jpg'),
             ),
-
-            SizedBox(
-              height: 20.0,
+            Text(
+              'Marwan Mai',
+              style: TextStyle(
+                fontSize: 40.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Pacifico',
+              ),
             ),
-            Container(
-              //Container can only have one child
-//              width: 100.0,
-              height: 100.0,
-              color: Colors.blue,
-              child: Text('Container 2'),
-            ),
-            Container(
-              //Container can only have one child
-//              width: 100.0,
-              height: 100.0,
-              color: Colors.red,
-              child: Text('Container 3'),
-            ),
-//            Container(
-//              width: double.infinity,
-//            )
+            Text(
+              'SOFTWARE ENGINEER',
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Colors.teal.shade100,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'SourceSansPro',
+                letterSpacing: 2.5,
+              ),
+            )
           ],
         )),
       ),
